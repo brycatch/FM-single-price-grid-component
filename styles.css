@@ -1,17 +1,144 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 :root {
     --cyan: hsl(179, 62%, 43%);
+    --cyan-2: hsl(179, 47%, 52%);
+    --cyan-3: hsl(179, 60%, 62%);
+    --cyan-4: hsl(179, 56%, 69%);
     --bright-yellow: hsl(71, 73%, 54%);
     --light-gray: hsl(204, 43%, 93%);
     --grayish-blue: hsl(218, 22%, 67%);
 }
 
 * {
-    font-family: Karla, Arial;
+    font-family: "Karla", Arial;
     padding: 0;
     margin: 0;
 }
 
 body {
     font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.community {
+    width: 100%;
+    height: 40vh;
+    padding: 2em 3em;
+    box-sizing: border-box;
+}
+
+.community__title {
+    color: var(--cyan);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.community__guarantee {
+    font-size: 1.2em;
+    color: var(--bright-yellow);
+    font-weight: 700;
+    padding: 1em 0;
+}
+
+.community__message--large {
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+}
+
+.subscription {
+    width: 50%;
+    height: 60vh;
+    box-sizing: border-box;
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cyan);
+    color: var(--light-gray);
+}
+
+.subscription__title {
+    font-size: 1.2em;
+    padding: 1em 0;
+    text-transform: capitalize;
+}
+
+.subscription__price-info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.subscription__price {
+    font-size: 2em;
+    font-weight: 700;
+    padding-right: 0.5em;
+}
+
+.subscription__date {
+    font-size: 1.2em;
+    color: var(--cyan-3);
+}
+
+.subscription__day {
+    font-size: 1.2em;
+    padding-bottom: 2em;
+}
+
+.subscription__sign-up {
+    text-decoration: none;
+    color: var(--light-gray);
+    background-color: var(--bright-yellow);
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.75);
+}
+
+.why-us {
+    width: 50%;
+    height: 60vh;
+    padding: 2em 3em;
+    box-sizing: border-box;
+    background-color: var(--cyan-2);
+    color: var(--light-gray);
+}
+
+.why-us__title {
+    font-size: 1.2em;
+    padding: 1em 0;
+    text-transform: capitalize;
+}
+
+.why_us_benefits {
+    list-style: none;
+}
+
+.why_us_benefits-item {
+    padding: 0.2em 0;
+    color: var(--light-gray);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .community {
+        height: auto;
+    }
+    .subscription {
+        width: 100%;
+        height: auto;
+    }
+    .why-us {
+        width: 100%;
+        height: auto;
+    }
 }
